@@ -13,7 +13,7 @@ if(userExist){
 }else{
     const newUser= new User(req.body);
     const createdUser= await newUser.save();
-    res.status(200).json(createdUser);
+    res.status(201).json(createdUser);
 }
     }catch(error){
             res.status(500).json({
